@@ -42,6 +42,14 @@ nav p {
     padding: 5px
 }
 
+
+
+
+
+
+
+
+
 /*setting my desired size and properties for the initial 'title page' section of my website
 and centering the text elements (my title) vertically and horizontally*/
 .title {
@@ -76,19 +84,33 @@ nav bar and chrome address bar to make it more aesthetic */
     transform: translateY(50px)
 }
 
-/*setting the size, properties and style of for the second 'about me' section of my website*/
-.about-me {
+
+
+
+
+
+
+
+/*setting the size of the about-me, experience, and contact tab*/
+.about-me, .experience {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--alternate-bg);
     width: 100%;
     height: 685px;
 }
 
+.experience {
+    background-color: var(--main-bg);
+}
+
+.about-me {
+    background-color: var(--alternate-bg);
+}
+
 /*positioning and sizing a 'header' section seperate to my header in order to position the actual header,
 and create the appropriate size for the decorative line I implement in the next bit of code*/
-.about-me-header {
+.about-me-header, .experience-header {
     display: flex;
     justify-content: center;
     position: relative;
@@ -97,7 +119,7 @@ and create the appropriate size for the decorative line I implement in the next 
 }
 
 /*this is a method i found on the internet to create a line that is vertically centered through my about me header, for decoration*/
-.about-me-header::after {
+.about-me-header::after, .experience-header::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -109,21 +131,28 @@ and create the appropriate size for the decorative line I implement in the next 
 }
 
 /*Styling the text of the header, and setting a background + z index of 1 to have a break in the decorative line*/
-.about-me-header h3 {
+.about-me-header h3, .experience-header h3 {
     z-index: 1;
     padding: 0 20px;
     text-align: center;
     font-size: 36px;
+}
+
+.about-me-header h3 {
     background-color: var(--alternate-bg);
 }
 
+.experience-header h3 {
+    background-color: var(--main-bg);
+}
+
 /*setting the size and property of the parent container of my biography/introduction paragraph and picture of me*/
-article {
+.about-me-container {
     position: absolute;
     display: flex;
-    justify-content: space-between;
     height: 351px;
     width: 930px;
+    justify-content: space-between;
     transform: translateY(214px);
 }
 
@@ -146,4 +175,82 @@ article img {
     position: relative;
     height: 300px;
     width: 300px;
+}
+
+
+
+
+
+
+
+.experience-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(214px);
+    width: 930px;
+    height: 398px;
+}
+.first-job-container, .second-job-container {
+    height: 174px;
+    width: 100%;
+}
+
+.second-job-container{
+    transform: translateY(48px)
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    padding-right: 10px;
+   
+    border-bottom: 1px solid black;
+    height: 116px;
+    width: 196px;
+}
+
+.header-container h3{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.header-container header p {
+    font-size: 14px;
+    text-align: right;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.first-job-subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 76px;
+    width: 196px;
+    font-size: 14px;
+}
+
+.first-job-subheader p {
+    margin-bottom: 25px;
+}
+
+.list-container {
+    position: absolute;
+    height: 174px;
+    width: 708px;
+    border-left: 1px solid black;
+    transform: translateY(-184px) translateX(220px);
+}
+
+.list-container ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    padding-top:10px;
+    line-height: 27px;
 }
