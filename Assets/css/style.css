@@ -1,0 +1,118 @@
+/*created variables for all repeated styles I noticed*/
+:root {
+    --main-bg: #fff;
+    --font-black: #000;
+    --alternate-bg: #F2F2F2;
+}
+
+/*The font will be universal for the entire page*/
+body {
+    font-family: 'Inter';
+    margin: 1px;
+    padding: 0;
+}
+
+/*I used justify-space-between to create 3 different sections for my nav bar*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 90px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*This sets my 'center' elements on the same horizontal row instead of a column*/
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/*removing the default list stylings for the li and p anchor tags and setting my own*/
+nav ul li a, nav p a  {
+    color: var(--font-black);
+    text-decoration: none;
+}
+
+/*creating a border unique to this nav bar element, to accentuate the contact button*/
+nav p {
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    padding: 5px
+}
+
+/*setting my desired size and properties for the initial 'title page' section of my website
+and centering the text elements (my title) vertically and horizontally*/
+.title {
+    width: 100%;
+    height: 859px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*setting the size of my 'title' header and adjusting the height to compensate for the excess
+nav bar and chrome address bar to make it more aesthetic */
+.title h2 {
+    font-size: 72px;
+    text-align: center;
+    transform: translateY(-200%);
+}
+
+/*setting the sub heading styles and position*/
+.title p {
+    position: absolute;
+    transform: translateY(-200%);
+    font-size: 24px;
+}
+
+/*setting the size and position for my arrow svg*/
+.arrow {
+    height: 40px;
+    width: 40px;
+    transform: translateY(50px)
+}
+
+/*setting the size, properties and style of for the second 'about me' section of my website*/
+.about-me {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--alternate-bg);
+    width: 100%;
+    height: 685px;
+}
+
+/*positioning and sizing a 'header' section seperate to my header in order to position the actual header,
+and create the appropriate size for the decorative line I implement in the next bit of code*/
+.about-me-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translateY(120px);
+    width: 930px;
+}
+
+/*this is a method i found on the internet to create a line that is vertically centered through my about me header, for decoration*/
+.about-me-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 50%;
+}
+
+/*Styling the text of the header, and setting a background + z index of 1 to have a break in the decorative line*/
+.about-me-header h3 {
+    z-index: 1;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 36px;
+    background-color: var(--alternate-bg);
+}
