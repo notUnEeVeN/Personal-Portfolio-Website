@@ -12,6 +12,18 @@ body {
     padding: 0;
 }
 
+/*removes odd purple dash that appeared around images that had interactable links*/
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/*NAV BAR*/
 /*I used justify-space-between to create 3 different sections for my nav bar*/
 nav {
     display: flex;
@@ -49,7 +61,7 @@ nav p {
 
 
 
-
+/*TITLE PAGE*/
 /*setting my desired size and properties for the initial 'title page' section of my website
 and centering the text elements (my title) vertically and horizontally*/
 .title {
@@ -90,18 +102,14 @@ nav bar and chrome address bar to make it more aesthetic */
 
 
 
-
+/*ABOUT ME PAGE*/
 /*setting the size of the about-me, experience, and contact tab*/
-.about-me, .experience {
+.about-me {
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 685px;
-}
-
-.experience {
-    background-color: var(--main-bg);
 }
 
 .about-me {
@@ -110,7 +118,7 @@ nav bar and chrome address bar to make it more aesthetic */
 
 /*positioning and sizing a 'header' section seperate to my header in order to position the actual header,
 and create the appropriate size for the decorative line I implement in the next bit of code*/
-.about-me-header, .experience-header {
+.about-me-header, .experience-header, .projects-header {
     display: flex;
     justify-content: center;
     position: relative;
@@ -119,7 +127,7 @@ and create the appropriate size for the decorative line I implement in the next 
 }
 
 /*this is a method i found on the internet to create a line that is vertically centered through my about me header, for decoration*/
-.about-me-header::after, .experience-header::after {
+.about-me-header::after, .experience-header::after, .projects-header::after, .other-projects-header::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -131,14 +139,14 @@ and create the appropriate size for the decorative line I implement in the next 
 }
 
 /*Styling the text of the header, and setting a background + z index of 1 to have a break in the decorative line*/
-.about-me-header h3, .experience-header h3 {
+.about-me-header h3, .experience-header h3, .projects-header h3, .other-projects-header h3 {
     z-index: 1;
     padding: 0 20px;
     text-align: center;
     font-size: 36px;
 }
 
-.about-me-header h3 {
+.about-me-header h3, .projects-header h3, .other-projects-header h3{
     background-color: var(--alternate-bg);
 }
 
@@ -172,6 +180,7 @@ and create the appropriate size for the decorative line I implement in the next 
 /*setting the size of my image, and the position property to relative, this automatically pushes it to the right hand 
 side of the article container, using the justify: space-between property*/
 article img {
+    border-radius: 5px;
     position: relative;
     height: 300px;
     width: 300px;
@@ -181,7 +190,15 @@ article img {
 
 
 
-
+/*EXPERIENCE PAGE*/
+.experience {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 785px;
+    background-color: var(--main-bg);
+}
 
 .experience-container {
     position: absolute;
@@ -253,4 +270,162 @@ article img {
     padding-left: 40px;
     padding-top:10px;
     line-height: 27px;
+}
+
+
+
+
+
+
+
+
+
+/*PROJECT PAGE - MAIN PROJECT SECTION*/
+.projects {
+    border: 1px solid black;
+    background-color: var(--alternate-bg);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1208px;
+}
+
+.projects-container {
+    display: flex;
+    position: relative;
+    width: 930px;
+    height: 249px;
+    transform: translateY(170px);
+
+}
+
+.projects-container img {
+    height: 249px;
+    width: 455px;
+    border-radius: 5px;
+}
+
+.first-project-description {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+    transform: translateX(52%) translateY(215px);
+    height: 166px;
+    width: 455px;
+    
+}
+
+.first-project-description h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.first-project-description p {
+    line-height: 27px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sub-description  {
+    padding: 10px;
+    transform: translateX(63px) translateY(100px)
+
+}
+
+.github-icon img {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    left: 20px;
+    top: 100px;
+}
+
+.link-icon img {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    left: 50px;
+    top: 73px;
+}
+
+
+
+
+
+
+
+
+
+/*OTHER PROJECTS SECTION*/
+.other-projects-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translateY(180px);
+    width: 930px;
+}
+
+.other-projects-container {
+    height: 425px;
+    width: 930px;
+    transform: translateY(230px);
+}
+
+.project1-container {
+    height: 212.5px;
+    width: 465px;
+}
+
+.project1-container img {
+    position: relative;
+    height: 95px;
+    width: 95px;
+    border-radius: 0;
+}
+
+.project1-subcontainer {
+    position: absolute;
+    height: 93px;
+    width: 355px;
+    transform: translateX(15px);
+    border-bottom: 1px solid black;
+}
+
+.subcontainer-header h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    padding: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+}
+
+.project1-container p {
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 15px;
+    transform: translateX(100px);
+}
+
+.project1-subcontainer p {
+    font-size: 14px;
+    padding: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    line-height: 23.8px;
+    transform: translateX(0px)
+}
+
+.project1-github img {
+    height:25px;
+    width: 25px;
+    transform: translateY(65px) translateX(12.5px)
+}
+
+.project1-link img {
+    height:25px;
+    width: 25px;
+    transform: translateY(65px) translateX(12.5px);
 }

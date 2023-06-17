@@ -34,7 +34,7 @@
             </a>
     </section>
     <!--about me page html-->
-    <section class="about-me">
+    <frontpage class="about-me">
         <header class="about-me-header"> 
             <h3>About Me</h3>
         </header>
@@ -48,8 +48,8 @@
             <img src="assets/images/sample1.png">
             </div>
         </article>
-    </section>
-    <section class="experience">
+    </frontpage>
+    <pagetwo class="experience">
         <header class="experience-header">
             <h3>Experience</h3>
         </header>
@@ -70,6 +70,7 @@
                     </ul>
                 </div>
             </article>
+            <!--because both articles here share the same decoration, i kept the name of most of the classes the same, so that a single css edit will impact them both-->
             <article class="second-job-container">
                 <header class="header-container">
                     <h3>Esports Player</h3>
@@ -87,7 +88,51 @@
                 </div>
             </article>
         </div>
-    </section>
+    </pagetwo>
+    <pagethree class="projects">
+            <header class="projects-header">
+                <h3>Featured Project</h3>
+            </header>
+            <container class="projects-container">
+                <a href="#"><img src="assets/images/sample1.png"></a>
+            </container>
+            <article class="first-project-description">
+                <header>
+                    <h3>Project Name</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida. </p>
+            </article>
+            <p class="sub-description">HTML CSS JS</p>
+            <a class="github-icon" href="#">
+                <img src="assets/images/github.PNG">
+            </a>
+            <a class="link-icon" href="#">
+                <img src="assets/images/linkto.PNG">
+            </a>
+            <header class="other-projects-header">
+                <h3>Other Projects</h3>
+            </header>
+            <container class="other-projects-container">
+                <article class="project1-container">
+                    <a href="#">
+                        <img src="assets/images/sample1.png">
+                    </a>
+                    <subcontainer class="project1-subcontainer">
+                        <header class="subcontainer-header">
+                            <h3>Project Name</h3>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                    </subcontainer>
+                    <p class="sub-description1">HTML CSS JS</p>
+                    <a class="project1-github" href="https://github.com/notUnEeVeN/prework-study-guide">
+                        <img src="assets/images/github.PNG">
+                    </a>
+                    <a class="project1-link">
+                        <img src="assets/images/linkto.PNG">
+                    </a>
+                </article>
+            </container>
+    </pagethree>
 </body>
 </html>
 
