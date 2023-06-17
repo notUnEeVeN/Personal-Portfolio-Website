@@ -188,7 +188,7 @@ this color depends on the alterating background colors I have, hence the need fo
     line-height: var(--line-height);
 }
 
-article img {
+.about-me-image img {
     border-radius: var(--border-radius);
     height: 300px;
     width: 300px;
@@ -205,7 +205,7 @@ article img {
     display:flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 1000px;
     background-color: var(--main-bg);
 }
 
@@ -214,7 +214,11 @@ so that I could just keep adding the same html format, and another experience co
 very quick to add another experience tab*/
 .experience-container {
     position: absolute;
-    transform: translateY(214px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 800px;
+    transform: translateY(150px);
     width: var(--header-width);
 }
 
@@ -224,9 +228,8 @@ very quick to add another experience tab*/
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-bottom: 10px;
     padding-right: 10px;
-   
+    padding-bottom: 10px;
     border-bottom: 1px solid black;
     height: 116px;
     width: 196px;
@@ -318,7 +321,7 @@ I used a similar strategy to the previous page, creating a container for every u
 .first-project-description h3 {
     font-size: 30px;
     margin-bottom: 10px;
-    transform:translateX(-1px)
+    transform:translateX(-5px)
 }
 
 .first-project-description p {
@@ -329,7 +332,8 @@ I used a similar strategy to the previous page, creating a container for every u
 
 .sub-description  {
     padding: 10px;
-    transform: translateX(63px) translateY(100px)
+    padding-left: 0;
+    transform: translateX(56px) translateY(100px)
 
 }
 
@@ -407,6 +411,7 @@ unique properties, due to the fact that it is positioned differently on its pare
     padding: 5px;
     padding-bottom: 0px;
     padding-left: 0;
+    transform: translateX(-2px)
 }
 
 .other-projects-subcontainer p {
@@ -480,6 +485,10 @@ unique properties, due to the fact that it is positioned differently on its pare
 /*Adapts the screen before the content starts getting cut off, and switches to a new 'mobile' format, fit for ipad and iphone
 front page remains an appropriate size by default*/
 @media screen and (max-width: 992px) {
+    .title h2{
+        height: 300px;
+    }
+
     .about-me {
         height: 1085px;
     }
@@ -504,8 +513,13 @@ front page remains an appropriate size by default*/
     .about-me-container img {
         margin-bottom: 50px;
     }
-
+    
+    .experience {
+        height: 1400px;
+    }
     .experience-container {
+        transform: translateY(50px);
+        height: 1300px;
         width: 600px;
     }
 
