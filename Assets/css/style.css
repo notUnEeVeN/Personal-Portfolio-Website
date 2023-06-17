@@ -1,29 +1,39 @@
-/*created variables for all repeated styles I noticed*/
 :root {
     --main-bg: #fff;
     --font-black: #000;
     --alternate-bg: #F2F2F2;
+    --font-size: 16px;
+    --line-height: 27.2px;
+    --border-radius: 5px;
+    --header-width: 930px
 }
 
-/*The font will be universal for the entire page*/
 body {
     font-family: 'Inter';
-    margin: 1px;
-    padding: 0;
+
 }
 
-/*removes odd purple dash that appeared around images that had interactable links*/
+/*removes undesirable purple dash that appeared around images that had interactable links*/
 a {
     text-decoration: none;
 }
 
-/*adds a scrool animation when going using the nav bar to skip to different parts of the site*/
+/*adds a scrool animation when going using the nav bar to skip to different parts of the site to every
+element in the html*/
 html {
     scroll-behavior: smooth;
 }
 
+/*adding the effect on hover to visually show when the user is hovered over all photos with an anchor link 
+(for every icon that links githubs/deployed projects*/
 a img:hover {
     transform:scale(1.1)
+}
+
+/*doing this to remove the default inline properties that section and div has, as I initially was using semantic tags that I found out are not 
+better to use than section or div as they aren't standard html elements*/
+section, div {
+    display: inline; /* or inline, inline-block, etc. as needed */
 }
 
 
@@ -33,7 +43,7 @@ a img:hover {
 
 
 /*NAV BAR*/
-/*I used justify-space-between to create 3 different sections for my nav bar*/
+/*I used justify-space-between to create 3 clear sections of left, center, and right on the nav bar*/
 nav {
     display: flex;
     align-items: center;
@@ -50,12 +60,12 @@ nav ul li {
     padding: 10px;
 }
 
-/*removing the default list stylings for the li and p anchor tags and setting my own*/
 nav ul li a, nav p a  {
     color: var(--font-black);
     text-decoration: none;
 }
 
+/*adding the effect on hover to visually show when the user is hovered over  the items on the nav bar*/
 nav ul li a:hover, nav p a:hover {
     font-size: larger;
 }
@@ -63,7 +73,7 @@ nav ul li a:hover, nav p a:hover {
 /*creating a border unique to this nav bar element, to accentuate the contact button*/
 nav p {
     border: 1px solid #D3D3D3;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px
 }
 
@@ -75,8 +85,7 @@ nav p {
 
 
 /*TITLE PAGE*/
-/*setting my desired size and properties for the initial 'title page' section of my website
-and centering the text elements (my title) vertically and horizontally*/
+/*this section of code is positioning and sizing the title page correctly*/
 .title {
     width: 100%;
     height: 959px;
@@ -87,26 +96,22 @@ and centering the text elements (my title) vertically and horizontally*/
     align-items: center;
 }
 
-/*setting the size of my 'title' header and adjusting the height to compensate for the excess
-nav bar and chrome address bar to make it more aesthetic */
 .title h2 {
     font-size: 72px;
     text-align: center;
-    transform: translateY(-200%);
+    height: 400px;
 }
 
-/*setting the sub heading styles and position*/
 .title p {
     position: absolute;
-    transform: translateY(-200%);
+    height: 200px;
     font-size: 24px;
 }
 
-/*setting the size and position for my arrow svg*/
 .arrow {
     height: 40px;
     width: 40px;
-    transform: translateY(50px)
+    height: 120px;
 }
 
 
@@ -115,7 +120,6 @@ nav bar and chrome address bar to make it more aesthetic */
 
 
 /*ABOUT ME PAGE*/
-/*setting the size of the about-me, experience, and contact tab*/
 .about-me {
     display:flex;
     flex-direction: column;
@@ -128,36 +132,36 @@ nav bar and chrome address bar to make it more aesthetic */
     background-color: var(--alternate-bg);
 }
 
-/*positioning and sizing a 'header' section seperate to my header in order to position the actual header,
-and create the appropriate size for the decorative line I implement in the next bit of code*/
+/*I'm able to group all of the headers styling in the same section, as they all share the same properties, I use the transform property to move it,
+as it moves the position of the entire header in one piece, rather than the line and the actual header seperately*/
 .about-me-header, .experience-header, .projects-header, .contact-header {
     display: flex;
     justify-content: center;
-    position: relative;
     transform: translateY(120px);
-    width: 930px;
+    width: var(--header-width);
 }
 
-/*this is a method i found on the internet to create a line that is vertically centered through my about me header, for decoration*/
+/*this is a method i found on the internet to create a line that is vertically centered through my about me header, for decoration, again, I am able to 
+group all the header::after together as they share the exact same style*/
 .about-me-header::after, .experience-header::after, .projects-header::after, .other-projects-header::after, .contact-header::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: black;
-    left: 0;
-    right: 0;
+    background-color: var(--font-black);
     top: 50%;
 }
 
-/*Styling the text of the header, and setting a background + z index of 1 to have a break in the decorative line*/
+/*Styling the text of the header, and setting a background + z index of 1 to have a break in the decorative line
+again, I am able to group all the header::after together as they share the exact same style*/
 .about-me-header h3, .experience-header h3, .projects-header h3, .other-projects-header h3, .contact-header h3 {
     z-index: 1;
     padding: 0 20px;
-    text-align: center;
     font-size: 36px;
 }
 
+/*setting the background color of the actual header text for all headers so there is a visual break in the decorative line for all headers
+this color depends on the alterating background colors I have, hence the need for two different sections*/
 .about-me-header h3, .projects-header h3, .other-projects-header h3{
     background-color: var(--alternate-bg);
 }
@@ -166,33 +170,26 @@ and create the appropriate size for the decorative line I implement in the next 
     background-color: var(--main-bg);
 }
 
-/*setting the size and property of the parent container of my biography/introduction paragraph and picture of me*/
+/*The rest of this section styles and positions the image, and text for the about me page*/
 .about-me-container {
     position: absolute;
     display: flex;
-    height: 351px;
-    width: 930px;
+    width: var(--header-width);
     justify-content: space-between;
     transform: translateY(214px);
 }
 
-/*setting the size of the parent container of the actual text so I can format it to the desired size*/
 .info {
-    height: 351 px;
     width: 551px;
 }
 
-/*styling the actual text of my introduction*/
 .info p {
-    font-size: 16px;
-    line-height: 160%;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
 }
 
-/*setting the size of my image, and the position property to relative, this automatically pushes it to the right hand 
-side of the article container, using the justify: space-between property*/
 article img {
-    border-radius: 5px;
-    position: relative;
+    border-radius: var(--border-radius);
     height: 300px;
     width: 300px;
 }
@@ -202,32 +199,26 @@ article img {
 
 
 /*EXPERIENCE PAGE*/
+/*For this section, my strategy was creating multiple box containers, and positioning them within eachother, to style/format it in a unique way*/
+/*This is the container of the entire page, setting the height and properties*/
 .experience {
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 785px;
+    height: 800px;
     background-color: var(--main-bg);
 }
 
+/*This is the initial rectangular container that will hold all the smaller containers for the job title, description, etc, I titled the html in the same fashion,
+so that I could just keep adding the same html format, and another experience container would form, based on the order I have them in in the html, making the process
+very quick to add another experience tab*/
 .experience-container {
     position: absolute;
-    display: flex;
-    flex-direction: column;
     transform: translateY(214px);
-    width: 930px;
-    height: 398px;
-}
-.first-job-container, .second-job-container {
-    height: 174px;
-    width: 100%;
+    width: var(--header-width);
 }
 
-.second-job-container{
-    transform: translateY(48px)
-}
-
+/*as evident by the semantic tag, this is the container that contains the job position, and what company I worked at, on the left hand side of the experience container*/
 .header-container {
     display: flex;
     flex-direction: column;
@@ -241,20 +232,19 @@ article img {
     width: 196px;
 }
 
+/*This section of code is styling/positioning the containers and content of the left hand side of the experience container, which includes the 
+header, subheader, which were semantically named*/
 .header-container h3{
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 24px;
+    padding-bottom: 5px;
+    
 }
 
 .header-container header p {
     font-size: 14px;
-    text-align: right;
-    margin: 10px;
-    line-height: 1.5;
+    line-height: var(--line-height);
 }
 
-.first-job-subheader {
+.experience-subheader {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,13 +254,13 @@ article img {
     font-size: 14px;
 }
 
-.first-job-subheader p {
+.experience-subheader p {
     margin-bottom: 25px;
 }
 
+/*This section of code is creating, and styling the container for the list that covers the majority of the experience container on the right hand side*/
 .list-container {
     position: absolute;
-    height: 174px;
     width: 708px;
     border-left: 1px solid black;
     transform: translateY(-184px) translateX(220px);
@@ -279,8 +269,8 @@ article img {
 .list-container ul {
     list-style-type: disc;
     padding-left: 40px;
-    padding-top:10px;
-    line-height: 27px;
+    padding-top: 5px;
+    line-height: var(--line-height);
 }
 
 
@@ -292,28 +282,25 @@ article img {
 
 
 /*PROJECT PAGE - MAIN PROJECT SECTION*/
+/*This section of code is positioning and styling the main featured project, it is the center of attention, so needs its own unique dimenions
+I used a similar strategy to the previous page, creating a container for every unique part of the section, and manipulating the position with those*/
 .projects {
     background-color: var(--alternate-bg);
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     height: 1100px;
 }
 
 .projects-container {
-    display: flex;
-    position: relative;
-    width: 930px;
-    height: 249px;
+    width: var(--header-width);
     transform: translateY(170px);
-
 }
 
 .projects-container img {
     height: 249px;
     width: 455px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 .first-project-description {
@@ -322,7 +309,7 @@ article img {
     flex-direction: column;
     justify-content: flex-end;
     border-bottom: 1px solid black;
-    transform: translateX(52%) translateY(215px);
+    transform: translateX(238px) translateY(215px);
     height: 166px;
     width: 455px;
     
@@ -331,11 +318,12 @@ article img {
 .first-project-description h3 {
     font-size: 30px;
     margin-bottom: 10px;
+    transform:translateX(-1px)
 }
 
 .first-project-description p {
-    line-height: 27px;
-    font-size: 16px;
+    line-height: var(--line-height);
+    font-size: var(--font-size);
     margin-bottom: 10px;
 }
 
@@ -345,18 +333,18 @@ article img {
 
 }
 
-.github-icon img {
+.github-icon img, .link-icon img  {
     position: relative;
     height: 25px;
     width: 25px;
+}
+
+.github-icon img {
     left: 20px;
     top: 100px;
 }
 
 .link-icon img {
-    position: relative;
-    height: 25px;
-    width: 25px;
     left: 50px;
     top: 73px;
 }
@@ -374,69 +362,82 @@ article img {
 
 
 /*OTHER PROJECTS SECTION*/
+/*This is section is for the other projects header, I didn't group it with the rest of them as I did for other headers, as this one has slightly
+unique properties, due to the fact that it is positioned differently on its parent container 'page'*/
 .other-projects-header {
     display: flex;
     justify-content: center;
-    position: relative;
     transform: translateY(180px);
-    width: 930px;
+    width: var(--header-width);
 }
 
-.other-projects-container {
-    height: 425px;
-    width: 930px;
+/*This is the intended parent container for the first row of 'Other projects'*/
+.row-one-projects-container {
+    display: flex;
+    justify-content: space-between;
+    width: var(--header-width);
     transform: translateY(230px);
 }
 
-.project1-container {
+/*This section of code is styling and positioning the parent containers for the individual projects on row one*/
+.other-projects-container {
     height: 212.5px;
-    width: 465px;
+    width: 445px;
 }
 
-.project1-container img {
+.other-projects-container img {
     position: relative;
     height: 95px;
     width: 95px;
     border-radius: 0;
 }
 
-.project1-subcontainer {
+/*This section styles and position the other-proects subcontainers and its various elements*/
+.other-projects-subcontainer {
     position: absolute;
     height: 93px;
-    width: 355px;
+    width: 335px;
     transform: translateX(15px);
     border-bottom: 1px solid black;
 }
 
-.subcontainer-header h3 {
+.other-projects-subcontainer h3 {
     margin-top: 10px;
     font-size: 24px;
     padding: 5px;
     padding-bottom: 0px;
-    padding-left: 5px;
+    padding-left: 0;
 }
 
-.project1-container p {
+.other-projects-subcontainer p {
     position: absolute;
     padding-top: 10px;
-    padding-left: 20px;
+    padding-left: 14px;
     transform: translateX(100px);
 }
 
-.project1-subcontainer p {
+/*This code styles and positions the paragraph of the subcontainer that contains the title, this is short description of the project*/
+.other-projects-subcontainer p {
     font-size: 14px;
     padding: 5px;
-    padding-left: 5px;
+    padding-left: 0px;
     margin-bottom: 5px;
     line-height: 23.8px;
     transform: translateX(0px)
 }
 
-.project1-link img, .project1-github img {
-    height:25px;
+.other-sub-description {
+    padding: 5px;
+    padding-left: 0;
+    width: 120px;
+    transform: translateX(110px);
+}
+
+/*grouped the two icon styles together as they share the same style and positioning*/
+.other-projects-link img, .other-projects-github img {
+    height: 25px;
     width: 25px;
-    top: 65px;
-    left: 18.5px;
+    left: 105px;
 }
 
 
@@ -448,16 +449,12 @@ article img {
 .contact {
     background-color: var(--main-bg);
     display:flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 600px;
 }
 
 .contact-container {
     height: 369px;
-    width: 550px;
     transform: translateY(215px);
 }
 
@@ -467,25 +464,11 @@ article img {
     line-height: 27px;
 }
 
-/**/
-.linkedin img {
-    height: 40px;
-    width: 40px;
-    transform: translateY(0px);
-}
 
-.github img {
+.linkedin img, .github img, .gmail img{
     height: 40px;
     width: 40px;
     transform: translateY(0px);
-}
-
-.gmail img {
-    height: 40px;
-    width: 40px;
-    background: none;
-    transform: translateY(0px);
-    
 }
 
 /*these images aren't responding to the universal transformation i put in on the top of the file, this is a temp fix*/
@@ -509,7 +492,7 @@ front page remains an appropriate size by default*/
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        transform: translateY(414px);
+        transform: translateY(214px);
     }
 
     .info {
@@ -543,6 +526,7 @@ front page remains an appropriate size by default*/
     }
 
     .first-project-description {
+        transform: translateX(52%) translateY(215px);
         width: 300px;
     }
 
@@ -550,8 +534,13 @@ front page remains an appropriate size by default*/
         font-size: 12px;
     }
 
+    .row-one-projects-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .other-projects-container {
-        transform: translateX(240px) translateY(250px);
+        transform: translateX(240px) translateY(50px);
     }
 
 }

@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title> Module 2 Challenge </title>
+    <title>Tybalt Mallet's Portfolio</title>
 </head>
-
 <body>
     <!--split the nav bar into 3 unique tags so that I can space them evenly for a more aesthetic look-->
     <nav>
@@ -30,110 +29,123 @@
             <p>I design and build websites </p>
             <!--implemented svg here-->
             <a class="arrow" href="#about-me">
-                <img src="./Assets/svg/double_chevron_down.svg">
+                <img src="./Assets/svg/double_chevron_down.svg" alt="Down arrow icon">
             </a>
     </section>
     <!--about me page html-->
-    <frontpage id="about-me" class="about-me">
+    <section id="about-me" class="about-me">
         <header class="about-me-header"> 
             <h3>About Me</h3>
         </header>
-        <article class="about-me-container">
+        <section class="about-me-container">
             <div class="info">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida. Suspendisse ultricies sollicitudin lacus, et rutrum nunc bibendum sed.<br> <br>
                     Donec tincidunt tellus sed libero ultricies, eu semper enim molestie. Etiam lorem quam, tincidunt nec malesuada eu, interdum nec leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi placerat tortor sed felis tristique.<br> <br>
                    Nunc aliquam magna ut nunc vestibulum, ut dictum nulla sagittis. Cras egestas magna sed nisl pellentesque, sed lobortis felis convallis. Phasellus eget ex at est lobortis iaculis eget non risus. Etiam ultricies at est sit amet condimentum.</p>
             </div>
             <div class="about-me-image">
-            <img src="Assets/images/sample1.png">
+                <img src="Assets/images/sample1.png" alt="Picture of Tybalt Mallet">
             </div>
-        </article>
-    </frontpage>
-    <pagetwo id="experience" class="experience">
+        </section>
+    </section>
+    <section id="experience" class="experience">
         <header class="experience-header">
             <h3>Experience</h3>
         </header>
         <div class="experience-container">
-            <article class="first-job-container">
-                <header class="header-container">
+            <section class="first-job-container">
+                <div class="header-container">
                     <h3>Esports Player</h3>
                     <p>CS-Entertainment</p>
-                </header>
-                <subheader class="first-job-subheader"> 
+                </div>
+                <div class="experience-subheader"> 
                     <p>Jan 2021 - Jan 2023</p>
-                </subheader>
-                <div class="list-container">
+                </div>
+                <article class="list-container">
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
                     </ul>
-                </div>
-            </article>
+                </article>
+            </section>
             <!--because both articles here share the same decoration, i kept the name of most of the classes the same, so that a single css edit will impact them both-->
             <article class="second-job-container">
-                <header class="header-container">
+                <div class="header-container">
                     <h3>Esports Player</h3>
                     <p>Cloud9 Esports</p>
-                </header>
-                <subheader class="first-job-subheader"> 
+                </div>
+                <div class="experience-subheader"> 
                     <p>Aug 2019 - Oct 2020</p>
-                </subheader>
-                <div class="list-container">
+                </div>
+                <article class="list-container">
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis vivamus facilisis ligula</li>
                     </ul>
-                </div>
+                </article>
             </article>
         </div>
-    </pagetwo>
-    <pagethree id="projects" class="projects">
+    </section>
+    <section id="projects" class="projects">
             <header class="projects-header">
                 <h3>Featured Project</h3>
             </header>
-            <container class="projects-container">
-                <a href="#"><img src="Assets/images/sample1.png"></a>
-            </container>
-            <article class="first-project-description">
-                <header>
+                <section class="projects-container">
+                    <a href="#"><img src="Assets/images/sample1.png" alt="Screenshot of Project Website"></a>
+                </section>
+                <article class="first-project-description">
                     <h3>Project Name</h3>
-                </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida. </p>
-            </article>
-            <p class="sub-description">HTML CSS JS</p>
-            <a class="github-icon" href="#">
-                <img src="Assets/images/github.PNG">
-            </a>
-            <a class="link-icon" href="#">
-                <img src="Assets/images/linkto.PNG">
-            </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis. Vivamus facilisis ligula id fringilla gravida. </p>
+                </article>
+                <p class="sub-description">HTML CSS JS</p>
+                <a class="github-icon" href="#">
+                    <img src="Assets/images/github.PNG" alt="Github logo">
+                </a>
+                <a class="link-icon" href="#">
+                    <img src="Assets/images/linkto.PNG" alt="External link logo">
+                </a>
             <header class="other-projects-header">
                 <h3>Other Projects</h3>
             </header>
-            <container class="other-projects-container">
-                <article class="project1-container">
+
+            <section class="row-one-projects-container">
+                <article class="other-projects-container">
                     <a href="#">
-                        <img src="Assets/images/sample1.png">
+                        <img src="Assets/images/sample1.png" alt="Screenshot of Project">
                     </a>
-                    <subcontainer class="project1-subcontainer">
-                        <header class="subcontainer-header">
-                            <h3>Project Name</h3>
-                        </header>
+                    <section class="other-projects-subcontainer">
+                        <h3>Project Name</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
-                    </subcontainer>
-                    <p class="sub-description1">HTML CSS JS</p>
-                    <a class="project1-github" href="https://github.com/notUnEeVeN/prework-study-guide">
-                        <img src="Assets/images/github.PNG">
+                    </section>
+                    <p class="other-sub-description">HTML CSS JS</p>
+                    <a class="other-projects-github" href="https://github.com/notUnEeVeN/prework-study-guide">
+                        <img src="Assets/images/github.PNG"  alt="Github logo">
                     </a>
-                    <a class="project1-link">
-                        <img src="Assets/images/linkto.PNG">
+                    <a class="other-projects-link" href="#">
+                        <img src="Assets/images/linkto.PNG" alt="External link logo">
                     </a>
                 </article>
-            </container>
-    </pagethree>
-    <pagefour id="contact" class="contact">
+                <article class="other-projects-container">
+                    <a href="#">
+                        <img src="Assets/images/sample1.png" alt="Screenshot of Project">
+                    </a>
+                    <section class="other-projects-subcontainer">
+                            <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vestibulum felis.</p>
+                    </section>
+                    <p class="other-sub-description">HTML CSS JS</p>
+                    <a class="other-projects-github" href="https://github.com/notUnEeVeN/prework-study-guide">
+                        <img src="Assets/images/github.PNG"  alt="Github logo">
+                    </a>
+                    <a class="other-projects-link" href="#">
+                        <img src="Assets/images/linkto.PNG" alt="External link logo">
+                    </a>
+                </article>
+            </section>
+    </section>
+    <section id="contact" class="contact">
         <header class="contact-header">
             <h3>Contact</h3>
         </header>
@@ -144,15 +156,15 @@
             </p>
         </article>
         <a href="https://www.linkedin.com/in/tybalt-mallet-502144133/" class="linkedin">
-            <img src="Assets/images/linkedin.PNG">
+            <img src="Assets/images/linkedin.PNG" alt="Linkedin Logo">
         </a>
         <a href="https://github.com/notUnEeVeN" class="github">
-            <img src="Assets/images/githubwhitebg.PNG">
+            <img src="Assets/images/githubwhitebg.PNG" alt="Github logo">
         </a>
         <a href="mailto:tybalt.mallet@gmail.com" class="gmail">
-            <img src="Assets/images/email.png">
+            <img src="Assets/images/email.png" alt="External link logo">
         </a>
-    </pagefour>
+    </section>
 </body>
 </html>
 
