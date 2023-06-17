@@ -17,6 +17,15 @@ a {
     text-decoration: none;
 }
 
+/*adds a scrool animation when going using the nav bar to skip to different parts of the site*/
+html {
+    scroll-behavior: smooth;
+}
+
+a img:hover {
+    transform:scale(1.1)
+}
+
 
 
 
@@ -45,6 +54,10 @@ nav ul li {
 nav ul li a, nav p a  {
     color: var(--font-black);
     text-decoration: none;
+}
+
+nav ul li a:hover, nav p a:hover {
+    font-size: larger;
 }
 
 /*creating a border unique to this nav bar element, to accentuate the contact button*/
@@ -95,7 +108,6 @@ nav bar and chrome address bar to make it more aesthetic */
     width: 40px;
     transform: translateY(50px)
 }
-
 
 
 
@@ -350,6 +362,10 @@ article img {
     top: 73px;
 }
 
+/*disabling the transform scale on the large image, looks weird*/
+.projects-container img:hover {
+    transform: scale(1);
+}
 
 
 
@@ -417,19 +433,12 @@ article img {
     transform: translateX(0px)
 }
 
-.project1-github img {
+.project1-link img, .project1-github img {
     height:25px;
     width: 25px;
-    transform: translateY(65px) translateX(12.5px)
+    top: 65px;
+    left: 12.5px;
 }
-
-.project1-link img {
-    height:25px;
-    width: 25px;
-    transform: translateY(65px) translateX(12.5px);
-}
-
-
 
 
 
@@ -438,7 +447,6 @@ article img {
 
 /*CONTACT PAGE*/
 .contact {
-    border: 1px solid black;
     background-color: var(--main-bg);
     display:flex;
     position: relative;
@@ -449,7 +457,6 @@ article img {
 }
 
 .contact-container {
-    position: absolute;
     height: 369px;
     width: 550px;
     transform: translateY(215px);
@@ -461,22 +468,28 @@ article img {
     line-height: 27px;
 }
 
+/**/
 .linkedin img {
     height: 40px;
     width: 40px;
-    transform: translateY(300px)
+    transform: translateY(0px);
 }
 
 .github img {
     height: 40px;
     width: 40px;
-    transform: translateY(300px)
+    transform: translateY(0px);
 }
 
 .gmail img {
     height: 40px;
     width: 40px;
     background: none;
-    transform: translateY(300px)
+    transform: translateY(0px);
+    
 }
 
+/*these images aren't responding to the universal transformation i put in on the top of the file, this is a temp fix*/
+.linkedin img:hover, .github img:hover, .gmail img:hover{
+    transform: scale(1.1);
+}
