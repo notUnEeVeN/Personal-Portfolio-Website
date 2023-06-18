@@ -42,6 +42,9 @@ section, div {
 
 
 
+
+
+
 /*NAV BAR*/
 /*I used justify-space-between to create 3 clear sections of left, center, and right on the nav bar*/
 nav {
@@ -84,6 +87,8 @@ nav p {
 
 
 
+
+
 /*TITLE PAGE*/
 /*this section of code is positioning and sizing the title page correctly*/
 .title {
@@ -113,6 +118,10 @@ nav p {
     width: 40px;
     height: 120px;
 }
+
+
+
+
 
 
 
@@ -193,6 +202,11 @@ this color depends on the alterating background colors I have, hence the need fo
     height: 300px;
     width: 300px;
 }
+
+
+
+
+
 
 
 
@@ -284,6 +298,7 @@ header, subheader, which were semantically named*/
 
 
 
+
 /*PROJECT PAGE - MAIN PROJECT SECTION*/
 /*This section of code is positioning and styling the main featured project, it is the center of attention, so needs its own unique dimenions
 I used a similar strategy to the previous page, creating a container for every unique part of the section, and manipulating the position with those*/
@@ -357,6 +372,8 @@ I used a similar strategy to the previous page, creating a container for every u
 .projects-container img:hover {
     transform: scale(1);
 }
+
+
 
 
 
@@ -450,6 +467,10 @@ unique properties, due to the fact that it is positioned differently on its pare
 
 
 
+
+
+
+
 /*CONTACT PAGE*/
 .contact {
     background-color: var(--main-bg);
@@ -480,6 +501,14 @@ unique properties, due to the fact that it is positioned differently on its pare
 .linkedin img:hover, .github img:hover, .gmail img:hover{
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
 
 
 /*Adapts the screen before the content starts getting cut off, and switches to a new 'mobile' format, fit for ipad and iphone
