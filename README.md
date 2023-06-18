@@ -1,7 +1,7 @@
 # Tybalt Mallet's Personal Portfolio Module 2
 
 ## Description
-This is the Module 2 challenge for the second week of the UCB Coding Bootcamp. For this challenge we were asked to create a website from scratch with no starter code, that would display informations and pictures of both me, and the projects I have done/will do in the future. The website features clickable nav bar elements that smooth scroll to the desired sections, as well as functional links to the github repositories/deployed links of all the projects in my portfolio. 
+This is the Module 2 challenge for the second week of the UCB Coding Bootcamp. For this challenge we were asked to create a website from scratch with no starter code, that would display information and pictures of both me, and the projects I have done/will do in the future. The website features clickable nav bar elements that smooth scroll to the desired sections, as well as functional links to the github repositories/deployed links of all the projects in my portfolio. 
 
 ## Project Link
 
