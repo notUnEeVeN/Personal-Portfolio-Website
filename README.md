@@ -9,7 +9,7 @@ https://notuneeven.github.io/Tybalt-Mallet-Personal-Portfolio/
 
 ## Screenshot of Website
 
-![Alt text](./Assets/images/fullsizeSS.PNG)
+![Alt text](./assets/images/fullsizeSS.PNG)
 
 ## Usage 
 
