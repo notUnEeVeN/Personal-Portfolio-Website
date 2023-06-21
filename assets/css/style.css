@@ -590,6 +590,22 @@ front page remains an appropriate size by default*/
 
 /*Switches the title page to better fit for phone size screen widths, all other mobile changes are still usable*/
 @media screen and (max-width: 720px) {
+    .title {
+        width: 100%;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+
+    .experience {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
     nav ul li {
         display: block;
         text-align: center;
