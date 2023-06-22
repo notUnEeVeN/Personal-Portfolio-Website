@@ -5,7 +5,7 @@
     --font-size: 16px;
     --line-height: 27.2px;
     --border-radius: 5px;
-    --header-width: 930px
+    --header-width: 930px;
 }
 
 body {
@@ -514,6 +514,10 @@ unique properties, due to the fact that it is positioned differently on its pare
 /*Adapts the screen before the content starts getting cut off, and switches to a new 'mobile' format, fit for ipad and iphone
 front page remains an appropriate size by default*/
 @media screen and (max-width: 992px) {
+    :root {
+        --header-width: none;
+    }
+
     .title h2{
         height: 300px;
     }
@@ -561,7 +565,7 @@ front page remains an appropriate size by default*/
     }
 
     .projects-container {
-        transform: translateY(170px) translateX(150px);
+        transform: translateY(170px) translateX(-175px);
     }
 
     .projects-container img {
@@ -583,29 +587,14 @@ front page remains an appropriate size by default*/
     }
 
     .other-projects-container {
-        transform: translateX(240px) translateY(50px);
+        transform: translateY(25px);
     }
 
 }
 
 /*Switches the title page to better fit for phone size screen widths, all other mobile changes are still usable*/
 @media screen and (max-width: 720px) {
-    .title {
-        width: 100%;
-    }
-
-    .about-me {
-        width: 100%;
-    }
-
-    .experience {
-        width: 100%;
-    }
-
-    .contact {
-        width: 100%;
-    }
-
+    
     nav ul li {
         display: block;
         text-align: center;
